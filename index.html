@@ -1,88 +1,89 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="reveal.js/dist/reset.css">
-		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
-		<link rel="stylesheet" href="reveal.js/dist/theme/black.css" id="theme">
-		<style type="text/css">
-			.header {
-			  position: absolute;
-			  display: table;
-			  top: 2%;
+	<title>reveal.js</title>
 
-			  color: $color-primary-2;
-			}
+	<link rel="stylesheet" href="reveal.js/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="reveal.js/dist/theme/white-contrast.css" id="theme">
+	<style type="text/css">
+		.header {
+			position: absolute;
+			display: table;
+			top: 2%;
 
-			.header span {
-			  display: table-cell;
-			  padding: 0px 15px 5px;
+			color: $color-primary-2;
+		}
 
-			  text-align: center;
-			  font-family: "Roboto Mono", monospace;
-			  font-size: 70%;
-			}
+		.header span {
+			display: table-cell;
+			padding: 0px 15px 5px;
 
-			.header span:nth-of-type(1) {
-			  text-align: left;
-			}
-			.header span:nth-last-child(1) {
-			  text-align: right;
-			}
+			text-align: center;
+			font-family: "Roboto Mono", monospace;
+			font-size: 70%;
+		}
 
-                        .reveal pre code {
-                          max-height: 650px;
-                        }
-		</style>
+		.header span:nth-of-type(1) {
+			text-align: left;
+		}
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown="slides.md"
-					data-separator="^---$"
-					data-separator-vertical="^----$"
-					data-separator-notes="^Notes?:"
-					data-charset="utf-8">
-				</section>
-			</div>
+		.header span:nth-last-child(1) {
+			text-align: right;
+		}
+
+		.reveal pre code {
+			max-height: 650px;
+		}
+	</style>
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown="slides.md" data-separator="^---$" data-separator-vertical="^----$"
+				data-separator-notes="^Notes?:" data-charset="utf-8">
+			</section>
 		</div>
-		<div id="header-content" class="header">
-			<!--span class="element">@mattcen | #FOSSY | #teachKidsWebDev | github.com/mattcen/2023-07-teach-kids-webdev</span-->
-		</div>
+	</div>
+	<div id="header-content" class="header">
+		<!--span class="element">@mattcen | #FOSSY | #teachKidsWebDev | github.com/mattcen/2023-07-teach-kids-webdev</span-->
+	</div>
 
-		<script src="reveal.js/dist/reveal.js"></script>
-		<script src="reveal.js/plugin/notes/notes.js"></script>
-		<script src="reveal.js/plugin/markdown/markdown.js"></script>
-		<script src="reveal.js/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
+	<script src="reveal.js/dist/reveal.js"></script>
+	<script src="reveal.js/plugin/notes/notes.js"></script>
+	<script src="reveal.js/plugin/markdown/markdown.js"></script>
+	<script src="reveal.js/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
 			hash: true,
 			hashOneBasedIndex: true,
 			transition: 'none',
 			controls: false,
 			slideNumber: 'c/t',
-                        totalTime: 12*60,
-			width:  560*2.5,
-			height: 300*2.5,
+			totalTime: 12 * 60,
+			width: 560 * 2.5,
+			height: 300 * 2.5,
 			autoSlideStoppable: false,
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-			window.addEventListener("load", function() {
-				revealDiv = document.querySelector("body div.reveal")
-				header = document.getElementById("header-content");
-				revealDiv.appendChild(header);
-			} );
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+		window.addEventListener("load", function () {
+			revealDiv = document.querySelector("body div.reveal")
+			header = document.getElementById("header-content");
+			revealDiv.appendChild(header);
+		});
+	</script>
+</body>
+
 </html>
