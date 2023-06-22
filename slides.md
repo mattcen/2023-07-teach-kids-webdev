@@ -5,6 +5,7 @@ Prepared by Matthew Cengia
 - Email: mattcen@mattcen.com
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
 - Matrix: [mattcen:matrix.org](https://matrix.to/#/@mattcen:matrix.org)
+- Website: [blog.mattcen.com](https://blog.mattcen.com)
 
 License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
