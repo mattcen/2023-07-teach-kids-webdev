@@ -10,7 +10,7 @@ License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 Note:
 
-- I'm Matt (he/him)
+- I'm Matt (they/them)
 - Find me by handle, M A T T C E N
 - Post about talk with #FOSSY and #teachKidsWebDev
 - Slides available on GitHub
