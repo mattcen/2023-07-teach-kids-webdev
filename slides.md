@@ -21,7 +21,7 @@ Prepared by Matthew Cengia
 
 - Email: mattcen@mattcen.com
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
-- Matrix: [mattcen:mattcen.com](https://matrix.to/#/@mattcen:mattcen.com)
+- Matrix: [@mattcen:mattcen.com](https://matrix.to/#/@mattcen:mattcen.com)
 - Website: [blog.mattcen.com](https://blog.mattcen.com)
 
 License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
