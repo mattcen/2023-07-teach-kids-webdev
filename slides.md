@@ -1,3 +1,20 @@
+---
+type: slide
+slideOptions:
+  theme: white
+  transition: none
+  hash: true
+  hashOneBasedIndex: true
+  controls: false
+  slideNumber: 'c/t'
+  totalTime: 2700
+  defaultTiming: 10
+  minimumTiming: 5
+  autoSlideStoppable: false
+  plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+attributes: '<!-- .slide: data-visibility="hidden" -->'
+---
+
 # Developing Labs for Teaching Kids Webdev
 
 Prepared by Matthew Cengia
