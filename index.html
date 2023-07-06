@@ -65,6 +65,7 @@
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
+		socket_server = 'https://reveal-multiplex.glitch.me'; // Location of socket.io server for multiplex
 		Reveal.initialize({
 			hash: true,
 			hashOneBasedIndex: true,
@@ -78,7 +79,25 @@
 			height: 300 * 2.5,
 			autoSlideStoppable: false,
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+
+			multiplex: {
+				// Example values. To generate your own, see the socket.io server instructions.
+				// For presenter:
+				//secret: '00000000000000000000', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+				// For viewer
+				secret: null, // null so the clients do not have control of the master presentation
+				id: '0123456789abcdef', // Obtained from socket.io server
+				url: socket_server
+			},
+			// Multiplex dependencies
+			dependencies: [
+				{ src: socket_server + '/socket.io/socket.io.js', async: true },
+				// For presenter
+				//{ src: socket_server + '/master.js', async: true },
+				// For viewer
+				{ src: socket_server + '/client.js', async: true },
+			]
 		});
 		window.addEventListener("load", function () {
 			revealDiv = document.querySelector("body div.reveal")
