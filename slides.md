@@ -17,7 +17,7 @@ attributes: '<!-- .slide: data-visibility="hidden" -->'
 
 # Developing Labs for Teaching Kids Webdev
 
-Prepared by Matthew Cengia
+Prepared by Matt Cengia
 
 - Email: mattcen@mattcen.com
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
