@@ -178,6 +178,26 @@ we now have a ![STEM & Innovation](https://scoutsvictoria.com.au/media/5774/stem
 
 - so let's talk about how we did all this technically
 
+Laptops:
+
+- Xubuntu
+- VS Code
+- Firefox
+
+Server:
+
+- Ubuntu
+- dnsmasq
+- Docker
+- [Traefik](https://traefik.io/traefik/) listening on port 80 (LAN-only; no HTTPS)
+- [sshpiper](https://github.com/tg123/sshpiper/) listening on port 22
+
+- Each Scout got root access on a Docker container
+
+- \*.scouthack pointed at the server
+- Traefik redirected \<username\>.scouthack to a given scout's Docker container's port 80
+- sshpiper redirected SSH connections with a given username to that scout's container's SSH server
+- VS Code on laptops used the SSH remote to connect to the Docker container and run web services there
 
 ---
 
