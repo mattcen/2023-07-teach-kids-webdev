@@ -15,9 +15,9 @@ slideOptions:
 attributes: '<!-- .slide: data-visibility="hidden" -->'
 ---
 
-# Developing Labs for Teaching Kids Webdev
+## Developing Labs for Teaching Kids Webdev
 
-Prepared by Matt Cengia
+Matt Cengia
 
 - Email: mattcen@mattcen.com
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
@@ -46,10 +46,11 @@ Note:
 Note:
 
 ---
-# Proprietary software statement
+
+## Proprietary software statement
 
 * Presenting on a macOS laptop (using FOSS slide tools)
-* Slides hosted on GitHub (FIXME: maybe mirror elsewhere)
+* Slides hosted on GitHub
 * Some proprietary VS Code extensions
 
 Note:
@@ -82,7 +83,7 @@ Note:
 
 Note:
 
-- https://github.com/mattcen/dockerlab
+- https://github.com/mattcen/dockerlab (FIXME: Add license)
 - (private) https://github.com/Scouts-Victoria-Program/scouthack
 
 # Timeline/Outline
