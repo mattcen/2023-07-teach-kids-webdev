@@ -30,8 +30,14 @@ Note:
 
 - I'm Matt (they/them)
 - Find me by handle, M A T T C E N
-- Post about talk with #FOSSY and #teachKidsWebDev
-- Slides available on GitHub
+- Post about talk using #FOSSY and #TeachKidsWebDev
+- Slides available on GitHub: https://github.com/mattcen/2023-07-teach-kids-webdev
+
+---
+
+## Slides
+
+[![https://github.com/mattcen/2023-07-teach-kids-webdev](repo_url.svg)](https://github.com/mattcen/2023-07-teach-kids-webdev)
 
 ---
 
