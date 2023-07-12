@@ -1,3 +1,5 @@
+# Teaching Kids Webdev
+
 ## What is scouts?
 
 I'm a scout leader in Australia.
@@ -200,7 +202,10 @@ Winging our course delivery worked relatively well the first couple of times, bu
 
 Even despite ensuring everyone was up-to-speed prior to starting my Flask session, throughout the morning I found that several folks had managed to accidentally delete whole blocks of code from their HTML, thus breaking their website. I attribute this to a shortage of keyboard/mouse proficiency, and to mitigate this in future, we may end up compromising and giving the scouts pre-made files at the beginning of each session, with none of their own customisations.
 
+I've been weighing up the benefits of using a completely web-based code editor, such as [OpenVSCode Server](https://github.com/gitpod-io/openvscode-server) or [Jupyter Lab](https://jupyter.org/), but our logic for using VS Code was that it gives participants a bit more option to install it on their personal computers, whereas an entirely server-side option wouldn't be as feasible for that.
+
 ## Conclusion
+
 All in all, we've had very positive responses from ScoutHack attendees and their parents. Several members have even returned for a second course, and, despite us basically covering the same material, they've managed to make use of the time to go above and beyond, hacking in their own improvements and asking us for occasional input on how to do something.
 
 We do intend to offer a "WebDev 2.0" course, going into more detail on either Flask/FastAPI or Django, as well as a "DevOps 1.0" course, to cover off how to actually customise one's own VPS by setting up a web server etc. We're not sure yet when we'll find time to do this, or which course makes more sense to start with, but we're looking forward to the journey!
