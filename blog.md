@@ -163,7 +163,7 @@ Finally, we wrapped up for the afternoon, had pizza for dinner (as is the tradit
 
 The following morning, we introducted server-side scripting, to show the full power of what a dynamic website can do.
 
-For our first course, we build a basic PHP script. Unfortunately I don't recall the details of it, but fortunately it doesn't matter, because after that we decided to switch to Python and make a Flask web app instead.
+We decided to do this by building a relatively simple Python Flask web server.
 
 The goal was to build a simple web form that allowed the scouts to submit program ideas that their scout groups might like to do. The form had two fields: an input box for the author, and a text area for the program idea.
 
@@ -190,13 +190,13 @@ The biggest challenge we found here was dealing with typos, which I'll explain m
 After we'd finished getting everyone's web app working, we gave the scouts a little time to make their own improvements if they wished, before getting them to shut down and disassemble their computers, pack up all their gear, and get ready to go home.
 We promised the scouts we'd give each of them access to a `.zip` file of their websites after they went home, so they could continue working on it if they wished.
 
-## Take-aways
+## Lessons learned
 
 One of the most interesting take-aways from this experience was that many young people are *not* proficient typists, despite growing up using technology. We speculate this might be because they are so used to touch-screens that using an actual physical keyboard hasn't been particularly necessary for them yet. The result of this was typos. *Lots* of typos. We spent most of our time, especially when we got to Python (HTML and CSS being more forgiving) fixing trivial syntax errors, despite cautioning the scouts that they needed to double-check they'd typed the code precisely. Fortunately, to expedite things, I was occasionally able to get onto the server and `diff` their code with my own to quickly pick up what they'd done wrong, and then fix it on the fly when we didn't have time to go into detail to explain exactly what was going on.
 
 This has the obvious down-side that the scouts don't get to properly *learn* how to debug code, but we had to make some compromises given how much we were covering in 2 days, and that our goal was to show what was possible and generate interest, rather than teach an web development course.
 
-One thing I'd like to do in future is make better use of Werkzeug's [web-based interactive debugger](https://werkzeug.palletsprojects.com/en/2.3.x/debug/#using-the-debugger). I didn't realise this existed until during the last ScoutHack, and it may prove too difficult to teach the scouts to use in such a short time-frame, but the power it brings to being able to work out why something is working is immense.
+One thing I'd like to do in future is make better use of Werkzeug's [web-based interactive debugger](https://werkzeug.palletsprojects.com/en/2.3.x/debug/#using-the-debugger). I didn't realise this existed until during the last ScoutHack, and it may prove too difficult to teach the scouts to use in such a short time-frame, but the power it brings to being able to work out why something isn't working is immense.
 
 Winging our course delivery worked relatively well the first couple of times, but in order to reduce ongoing effort, we need to tighten our course material. For the most recent iteration, I had a whole tutorial written on how to set up the Flask app, but it was dependent on the scouts having particular HTML and CSS files to begin with, and because the HTML and CSS sections had been done differently by their respective instructors this time around, those files didn't match my expected starting state, so I needed to adapt my material to suit, and then spend an hour or more the evening before the Flask session reviewing each of the 20+ students' code to ensure they were all sufficiently close to my expected starting point (while retaining any CSS or other customisations they'd made, where possible) that they'd be able to keep up.
 
