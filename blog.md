@@ -26,9 +26,9 @@ Ironically, while becoming a leader met my initial need to get away from the scr
 
 As a youth leading, adults supporting organisation the obvious choice was to prepare to hand down these responsibilities to the organisation's youth members. This approach has the advantages that it can be used as an opportunity to teach real world tech skills to youth, and to give them the agency to influcence to influence the direction of this IT infrastructure, if indeed they deem it to remain relevant.
 
-So in mid-2021, amidst recurring COVID lock-downs in Melbourne, my friend and fellow scout leader, [Luke](https://aus.social/@ekulbyrnes), suggested we run a tech camp to teach kids the basics of website development, with a side of sysadmin/operations if we got the time. Taking inspiration from GovHack, a hackathon the two of us have both participated in and run for several years, we coined the name "ScoutHack", and began weekly Jitsi video meetings to plan a two-day camp.
+So in mid-2021, amidst recurring COVID lock-downs in Melbourne, my friend and fellow scout leader, [Luke](https://infosec.exchange/@ekulbyrnes), suggested we run a tech camp to teach kids the basics of website development, with a side of sysadmin/operations if we got the time. Taking inspiration from GovHack, a hackathon the two of us have both participated in and run for several years, we coined the name "ScoutHack", and began weekly Jitsi video meetings to plan a two-day camp.
 
-![ScoutHack logo. A green monospaced font on a black background, which says "scout@hack:~$" in the style of a shell prompt](scouthack_logo.svg)
+![ScoutHack logo. A green monospaced font on a black background, which says "scout@hack:~\$" in the style of a shell prompt](scouthack_logo.svg)
 
 We decided that our syllabus should teach basic HTML, CSS, and the beginnings of some flavour of server-side scripting language. This is an ambitious undertaking, given that we only had a weekend, and were expecting youth as young as 11, of varying skill levels, but we reasoned that even if we had to walk them through the entire process step-by-step such that they didn't retain many of the finer details, it would be enough to give them all a taste of web development, such that they could pursue it further (possibly as part of a ScoutHack 2.0 event) in future.
 
@@ -169,6 +169,38 @@ Having pre-built the web app myself, I synthesised a git repository with a set o
 
 https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
 
+The general process here was:
+1. Create and activate a Python `venv`
+2. `pip install flask`
+3. Create a basic `website.py` file (8 lines of code) and make it executable with `chmod +x`
+4. Move existing `index.html` to a `templates/` folder where Flask can find it
+5. Run `./website.py`
+6. Browse to http://username.scouthack to see existing web page, albeit without other resources (images, CSS etc)
+7. Move other static assets into a `static/` folder for Flask, and update references in HTML
+8. Update HTML to template it with Jinja2
+9. Add HTML form to submit programme idea
+10. Write Python code to store form submission in a CSV file
+11. Write code to parse CSV and show programme list as HTML
+
+The biggest challenge we found here was dealing with typos, which I'll explain more later. Once things were working, the scouts had a lot of fun looking at and adding to each others' programme lists (sometimes in absurd ways, but that's to be expected).
+
+## Wrapping up
+After we'd finished getting everyone's web app working, we gave the scouts a little time to make their own improvements if they wished, before getting them to shut down and disassemble their computers, pack up all their gear, and get ready to go home.
+We promised the scouts we'd give each of them access to a `.zip` file of their websites after they went home, so they could continue working on it if they wished.
+
 ## Take-aways
 
-One of the most interesting take-aways from this experience was that many young people are *not* proficient typists, despite growing up using technology. We speculate this might be because they are so used to touch-screens, that using an actual physical keyboard hasn't been particularly necessary for them yet. The result of this was typos. *Lots* of typos. We spent most of our time fixing trivial syntax errors, despite cautioning the scouts that they needed to double-check they'd typed the code precisely.
+One of the most interesting take-aways from this experience was that many young people are *not* proficient typists, despite growing up using technology. We speculate this might be because they are so used to touch-screens that using an actual physical keyboard hasn't been particularly necessary for them yet. The result of this was typos. *Lots* of typos. We spent most of our time, especially when we got to Python (HTML and CSS being more forgiving) fixing trivial syntax errors, despite cautioning the scouts that they needed to double-check they'd typed the code precisely. Fortunately, to expedite things, I was occasionally able to get onto the server and `diff` their code with my own to quickly pick up what they'd done wrong, and then fix it on the fly when we didn't have time to go into detail to explain exactly what was going on.
+
+This has the obvious down-side that the scouts don't get to properly *learn* how to debug code, but we had to make some compromises given how much we were covering in 2 days, and that our goal was to show what was possible and generate interest, rather than teach an web development course.
+
+One thing I'd like to do in future is make better use of Werkzeug's [web-based interactive debugger](https://werkzeug.palletsprojects.com/en/2.3.x/debug/#using-the-debugger). I didn't realise this existed until during the last ScoutHack, and it may prove too difficult to teach the scouts to use in such a short time-frame, but the power it brings to being able to work out why something is working is immense.
+
+Winging our course delivery worked relatively well the first couple of times, but in order to reduce ongoing effort, we need to tighten our course material. For the most recent iteration, I had a whole tutorial written on how to set up the Flask app, but it was dependent on the scouts having particular HTML and CSS files to begin with, and because the HTML and CSS sections had been done differently by their respective instructors this time around, those files didn't match my expected starting state, so I needed to adapt my material to suit, and then spend an hour or more the evening before the Flask session reviewing each of the 20+ students' code to ensure they were all sufficiently close to my expected starting point (while retaining any CSS or other customisations they'd made, where possible) that they'd be able to keep up.
+
+Even despite ensuring everyone was up-to-speed prior to starting my Flask session, throughout the morning I found that several folks had managed to accidentally delete whole blocks of code from their HTML, thus breaking their website. I attribute this to a shortage of keyboard/mouse proficiency, and to mitigate this in future, we may end up compromising and giving the scouts pre-made files at the beginning of each session, with none of their own customisations.
+
+## Conclusion
+All in all, we've had very positive responses from ScoutHack attendees and their parents. Several members have even returned for a second course, and, despite us basically covering the same material, they've managed to make use of the time to go above and beyond, hacking in their own improvements and asking us for occasional input on how to do something.
+
+We do intend to offer a "WebDev 2.0" course, going into more detail on either Flask/FastAPI or Django, as well as a "DevOps 1.0" course, to cover off how to actually customise one's own VPS by setting up a web server etc. We're not sure yet when we'll find time to do this, or which course makes more sense to start with, but we're looking forward to the journey!
