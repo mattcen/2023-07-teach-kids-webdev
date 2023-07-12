@@ -1,5 +1,6 @@
 ---
-type: slide
+#type: slide
+title: Developing Labs for Teaching Kids Webdev
 slideOptions:
   theme: white
   transition: none
@@ -18,11 +19,16 @@ attributes: '<!-- .slide: data-visibility="hidden" -->'
 ## Developing Labs for Teaching Kids Webdev
 
 Matt Cengia
+(they/them)
 
+[blog.mattcen.com](https://blog.mattcen.com)
+
+<!--
 - Email: mattcen@mattcen.com
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
 - Matrix: [@mattcen:mattcen.com](https://matrix.to/#/@mattcen:mattcen.com)
 - Website: [blog.mattcen.com](https://blog.mattcen.com)
+-->
 
 License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
@@ -37,7 +43,7 @@ Note:
 
 ## Slides
 
-[![https://github.com/mattcen/2023-07-teach-kids-webdev](repo_url.svg)](https://github.com/mattcen/2023-07-teach-kids-webdev)
+[![https://github.com/mattcen/2023-07-teach-kids-webdev](images/repo_url.svg)](https://github.com/mattcen/2023-07-teach-kids-webdev)
 
 ---
 
@@ -60,6 +66,10 @@ Note:
 
 ---
 
+* FIXME: ScoutsVic and ScoutHack logos here
+
+---
+
 ## My experience
 
 - Scout Leader
@@ -74,21 +84,22 @@ Note:
 
 ---
 
-## Overview
+## Talk Overview
 
+- Inception
 - Objectives
 - Process
 - Delivery
 - Review
 
+Combination of story time and technical details
+
 Note:
 
 - https://github.com/mattcen/dockerlab (FIXME: Add license)
 - (private) https://github.com/Scouts-Victoria-Program/scouthack
-
-# Timeline/Outline
-
-- Luke decides it's a good idea to teach scouts how to make websites
+- (private) https://github.com/Scouts-Victoria-Program/scouthack_flask_2023/commits/main or https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
+  Start commit: https://github.com/Scouts-Victoria-Program/scouthack_flask_2023/commit/4d87000 or https://git.mattcen.com/mattcen/scouthack_flask/commit/4d87000
 
 ---
 
@@ -100,9 +111,9 @@ Note:
 
 ## Thanks
 
-* Luke Byrnes
-* Pieper Cafe (SE Portland)
-* FOSSY
+* Luke - [@ekulbyrnes](https://infosec.exchange/@ekulbyrnes)
+* [Pieper Cafe](http://www.piepercafe.com/) (SE Portland)
+* [FOSSY](https://fossy.us)
 
 Note:
 
@@ -142,8 +153,10 @@ Note:
 
 ...
 
+## Outline
+
 - I'm a scout leader in Australia
-- when they hear "scouts", most folks think of "boy scouts", but in AU it's an inclusive all-gender thing
+- when they hear "scouts", some folks think of "boy scouts", but in AU it's an inclusive all-gender thing
 - scouts don't just do outdoor skills like camping or hiking any more.
 - they get to choose their own activities, and in Australia we've recently overhauled our award/badge scheme to be more flexible
 we now have a ![STEM & Innovation](https://scoutsvictoria.com.au/media/5774/stem-and-innovation-icon-solid.png?width=160&height=160&mode=max) Special Interest Area badge
@@ -169,7 +182,7 @@ we now have a ![STEM & Innovation](https://scoutsvictoria.com.au/media/5774/stem
 - our broad syllabus was:
 	- HTML
 	- CSS
-	- PHP
+	- Server-side scripting
 - we really winged it the first time around
 - but the scouts loved it
 - Luke decided it would be a great idea for me to act as a computer while the scouts instructed me to make a sandwich (insert photo)
@@ -199,37 +212,17 @@ Server:
 - sshpiper redirected SSH connections with a given username to that scout's container's SSH server
 - VS Code on laptops used the SSH remote to connect to the Docker container and run web services there
 
----
+Syllabus
 
-Note:
+ref [ScoutHack course notes](https://hedgedoc.mattcen.com/f2kn9u7GSN6SXg4Hj1k-og)
 
-# What is Scouting?
+Down-time
 
-Scouting is a non-formal type of education.
+- Local Minetest servers
+- Interesting to note: first time when scouts could bring their own computers, one had Minecraft and felt superiour playing that while others played Minetest, until they realised they were playing alone, and then asked us to set up Minetest for them. Hooray, Network Effects!
 
-Young people learn new skills and responsible independence through the Scout Method. Although our programs are continually updated to remain contemporary, the Scout Method has stood the test of time.
+Future ideas
 
-## Elements of the Scout Method include:
-
-### Learning by Doing
-- Young people learn best through practical experiences, not theory.
-
-### Patrol System
-- Leadership and social skills are developed through teamwork and a sense of belonging.
-
-### Nature and the Outdoors
-- The outdoors is our main location for learning. This encourages a two-way relationship between the individual and the natural world.
-
-### Community Involvement
-- Scouts of all ages actively explore and learn about their responsibility to their community and the wider world.
-
-### Personal Progression
-- The learning journey focuses on challenging each individual to do their best through a range of experiences.
-
-### The Australian Scout Promise and Law
-- These are a simple set of common values that underpin all Scouting activities and interactions.
-
-### Youth Leading, Adults Supporting
-- As they progress through the Sections of Scouting, young people are increasingly self-managing. With help from their volunteer adult Leaders.
-
--- [Welcome to Scouting, Sep 2022](https://scoutsvictoria.com.au/media/7248/welcome-to-scouting-sep22.pdf)
+- FastAPI
+- Web-based VS Code
+- Jupyter Notebooks
