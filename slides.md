@@ -28,6 +28,7 @@ Matt Cengia
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
 - Matrix: [@mattcen:mattcen.com](https://matrix.to/#/@mattcen:mattcen.com)
 - Website: [blog.mattcen.com](https://blog.mattcen.com)
+- Slides: https://github.com/mattcen/2023-07-teach-kids-webdev
 -->
 
 License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
@@ -63,10 +64,7 @@ Note:
 
 * Slide tool is reveal.js
 * Proprietary VS code extensions are [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) and its dependencies. More details on their [GitHub page](https://github.com/Microsoft/vscode-remote-release) and in their [FAQ](https://code.visualstudio.com/docs/remote/faq#_why-arent-the-remote-development-extensions-or-their-components-open-source)
-
----
-
-* FIXME: ScoutsVic and ScoutHack logos here
+* Appear to be open source alternatives to these VS Code extensions, but I've not tested them properly yet
 
 ---
 
@@ -96,10 +94,158 @@ Combination of story time and technical details
 
 Note:
 
-- https://github.com/mattcen/dockerlab (FIXME: Add license)
+- https://github.com/mattcen/dockerlab
 - (private) https://github.com/Scouts-Victoria-Program/scouthack
 - (private) https://github.com/Scouts-Victoria-Program/scouthack_flask_2023/commits/main or https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
   Start commit: https://github.com/Scouts-Victoria-Program/scouthack_flask_2023/commit/4d87000 or https://git.mattcen.com/mattcen/scouthack_flask/commit/4d87000
+
+---
+
+
+# What is scouts?
+
+<img alt="Scouts Victoria logo" src="images/ScoutsVIC-Vert-11Col.svg" width="400px"/>
+
+Notes:
+
+- I'm a Scout Leader in Australia
+- some folks think of "boy scouts" [camping/hiking/constructing things with wood and rope](https://en.wikipedia.org/wiki/Scouting_for_Boys), or "girl scouts" and their cookies
+- Scouts Australia is inclusive to all genders etc., welcomes youth from 5-26 years, all adults
+- Not just outdoor stuff anymore
+- Anything the scouts want; [Youth Leading, Adults Supporting](images/YA.svg)
+
+- Scouts Australia has an updated award scheme to recognise youth achievement
+- Broader, less prescriptive
+- One of six new "Special Interest Areas" is "[STEM & Innovation](images/SA.svg)"; includes IT
+
+![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SA.svg)
+
+----
+
+# My history in scouting
+
+Notes:
+
+- Been involved since I was 8
+- Besides outdoor skills, also life skills:
+	- plan a healthy menu
+	- shopping list
+	- cook
+	-	budget
+	- pack for multi-day camp
+	- pack/tie down trailer
+	- lead peers without direct adult oversight
+- Took break at 18 for university
+- 3 years later, was staring at screens for work, study, play
+- needed escape
+- became scout leader in 2008, with 11- to 15-year-olds
+- since been leader of adults (training other leaders)
+- also activity leader (facilitating state-wide events for scouts of all ages)
+
+# Full-circle
+
+- Increasingly found myself staring at screen for scout work
+- Recently been using IT skills for scouts
+- open data/software to make topo maps
+- build/admin websites with Python/Django
+- fellow leaders are IT folk, but much work fell to me
+- also, we wouldn't be around forever, so needed to succession plan
+
+----
+
+Note:
+
+# ScoutHack inception
+
+- Leverage Youth Leading, Adults Supporting
+- Hand down to youth
+- Teach youth about IT
+- Give them agency to decide our direction
+- @ekulbyrnes suggested we run tech camp to teach basic webdev and maybe ops/sysadmin
+- Inspiration from GovHack - hackathon we ran together
+- Coined "ScoutHack", decided on 2-day camp
+- Began weekly planning via Jitsi
+
+# Syllabus
+
+- HTML
+- CSS
+- Intro to some server-side scripting
+- Ambitious for a weekend
+- 11+-year-olds of varying competence
+- Decided even they don't need to retain all the details
+- Just walking through step-by-step gives a taste
+- They can pursue in future, individually or at potential "ScoutHack 2.0"
+
+# Event logistics
+
+- Goals set; what resources do we need?
+- To optimise accessibility, don't require BYO computer
+- Having our own PC fleet ensures homogeneity, rather than dealing with different OSes etc
+- Andy had a fleet of Toshiba Tecra M10 laptops
+- From 2011; older than many of the scouts
+- Install Linux, lightweight DE; sufficiently capable
+- Only need web browser and text editor/IDE
+- Also managed to scrounge enough external keyboards, mice, and VGA monitors for second screen
+- Next problem: power for old inefficient monitors, despite being LCD
+- Managed to book recently-built activity centre at scout camp
+- Self-contained:
+	- bunk beds
+    - kitchen
+    - bathrooms
+    - large space for dining/classroom
+    - new electrical wiring!
+- Spread across several electrical circuits, managed to avoid tripping circuit-breakers!
+
+- Campsite was out in the sticks, so no internet, poor cell coverage
+- How do we teach web dev without internet?
+- Run local server
+- Could have kids run server on localhost
+- Wanted to give feeling of hosting where others could access
+- Devised bigger plans
+
+# Server-side tech details
+
+- Found old rack-mount server
+- Some switches
+- Many network cables
+- Decided to give scouts a full "VPS". Allow:
+    - Running webserver
+    - Installing packages
+    - Storing files
+- Each scout got:
+    - Ubuntu Docker container
+    - SSH server
+    - Standard user account
+    - full `sudo` access
+- Did this with:
+    - sshpiper
+        - reverse proxy gor SSH
+        - person-in-the-middle SSH
+        - routes connections to containers based on username or SSH key
+    - Traefik
+        - reverse HTTP proxy
+        - local DNS with `*.scouthack` pointing to server
+        - Traefik routing `http://username.scouthack` to each container's port 80
+- How do we teach SSH basics without going into great detail?
+
+# Client-side details
+
+- Laptops running Xubuntu (Ubuntu with XFCE)
+- SSHd for remote admin
+- Firefox
+- VS Code
+    - Remote SSH VS Code extension (closed-source; open alternative?)
+- Used Clonezilla to image all other laptops via IP multicast
+- Less than an hour to image 20+ machines
+
+# Getting students started
+
+- 
+
+----
+
+<img alt="ScoutHack logo. A green monospaced font on a black background, which says 'scout@hack:~\$' in the style of a shell prompt" src="images/scouthack.svg" width="400px"/>
 
 ---
 
@@ -123,106 +269,3 @@ Note:
 
 Note:
 
----
-<!-- .slide: data-visibility="hidden" -->
-
----
-<!-- .slide: data-visibility="not-hidden" -->
-
-Note:
-
-- GovHack as inspiration
-- getting people interested in IT and giving them a taste
-- create legion of devs; youth leading, adults supporting
-
-
-## what is scouting, and how does STEM fit  into it?
-- ref award scheme and "STEM & Innovation" [SIA](https://scoutsvictoria.com.au/activities-events/special-interest-areas/)
-## motivations
-## plan outline
-- networking basics
-- CSS
-- server-side scripting, originally PHP, now Python Flask (maybe switch to FastAPI?)
-
-## constraints
-- no internet due to location
-- want to *simulate* internet (having one's own website and domain ) nonetheless
-- low-powered laptops
-- not all participants had own computers and that leads to heterogeneity
-- many students have no prior knowledge, and in the age of mobile/tablets, may not use traditional computers currently, or understand the filesystem metaphor
-
-...
-
-## Outline
-
-- I'm a scout leader in Australia
-- when they hear "scouts", some folks think of "boy scouts", but in AU it's an inclusive all-gender thing
-- scouts don't just do outdoor skills like camping or hiking any more.
-- they get to choose their own activities, and in Australia we've recently overhauled our award/badge scheme to be more flexible
-we now have a ![STEM & Innovation](https://scoutsvictoria.com.au/media/5774/stem-and-innovation-icon-solid.png?width=160&height=160&mode=max) Special Interest Area badge
-
-- For several years I've been involved not just as a line leader facilitating youth program, but working on larger state/branch-level projects, which often require or benefit from the creation or customization of software tools to facilitate them. (can elaborate about this offline)
-- A lot of the time, this software has been primarily or exclusively built and managed by me
-- After chatting with Luke, we decided to see how we go getting youth more involved, given we're a Youth Leading, Adults Supporting organisation
-- With inspiration from GovHack, a hackathon we've both run in recent years, we decided on a weekend-length event to gove scouts a crash-course in website development
-- at the time (mid-2021), Melbourne was in-and-out of COVID lockdowns so we weren't sure if/when we'd be able to do this, and planned it online often via Jitsi video calls, with only a few weeks' notice
-
-- booked a scout camp with a newly built self-contained lodge; over 20 beds, bathrooms, kitchen, and large hall, and importantly, plenty of power
-- … but no internet
-- we chose to use this as a teaching opportunity to walk the scouts through the distinction between the internet, a network (or LAN), and "wifi"
-
-- Andy, one of our leaders, had access to around 100 Toshiba Tecra M10 laptops (older now than many of the scouts we're teaching) donated from a school
-- Luke had access to an old rack-mount Dell server
-- We assembled an IR classroom with the above and:
-	- a bunch of old switches
-	- network cables
-	- extension cords and power strips
-	- old VGA monitors
-
-- our broad syllabus was:
-	- HTML
-	- CSS
-	- Server-side scripting
-- we really winged it the first time around
-- but the scouts loved it
-- Luke decided it would be a great idea for me to act as a computer while the scouts instructed me to make a sandwich (insert photo)
-
-- after the first time around we decided to switch from PHP to Python Flask, because most of the apps we had been doing as leaders were in Python
-
-- so let's talk about how we did all this technically
-
-Laptops:
-
-- Xubuntu
-- VS Code
-- Firefox
-
-Server:
-
-- Ubuntu
-- dnsmasq
-- Docker
-- [Traefik](https://traefik.io/traefik/) listening on port 80 (LAN-only; no HTTPS)
-- [sshpiper](https://github.com/tg123/sshpiper/) listening on port 22
-
-- Each Scout got root access on a Docker container
-
-- \*.scouthack pointed at the server
-- Traefik redirected \<username\>.scouthack to a given scout's Docker container's port 80
-- sshpiper redirected SSH connections with a given username to that scout's container's SSH server
-- VS Code on laptops used the SSH remote to connect to the Docker container and run web services there
-
-Syllabus
-
-ref [ScoutHack course notes](https://hedgedoc.mattcen.com/f2kn9u7GSN6SXg4Hj1k-og)
-
-Down-time
-
-- Local Minetest servers
-- Interesting to note: first time when scouts could bring their own computers, one had Minecraft and felt superiour playing that while others played Minetest, until they realised they were playing alone, and then asked us to set up Minetest for them. Hooray, Network Effects!
-
-Future ideas
-
-- FastAPI
-- Web-based VS Code
-- Jupyter Notebooks
