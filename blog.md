@@ -38,7 +38,7 @@ We decided that our syllabus should teach basic HTML, CSS, and the beginnings of
 
 One of the first questions that arose after we'de decided what we wanted this event to achieve was: what resources did we need to make this all happen?
 
-We wanted the event to be accessible to as many people as possible, so that meant not assuming youth would have their own computers to bring. Fortunately, Andy, a member of our leadership team, has access to a fleet of Toshiba Tecra M10 laptops. Having been manufactured in 2011, they are now older than some of the youth who use them, and are certainly not the fastest machines, but we reasoned that if we installed Linux on them with a relatively lightweight desktop environment, they'd be quite capable of running a web browser and a text editor or IDE, which was all we needed.
+We wanted the event to be accessible to as many people as possible, so that meant not assuming youth would have their own computers to bring. Furthermore, having our own fleet would ensure we had a level playing field, rather than having some scouts on different operating systems etc. Fortunately, Andy, a member of our leadership team, has access to a fleet of Toshiba Tecra M10 laptops. Having been manufactured in 2011, they are now older than some of the youth who use them, and are certainly not the fastest machines, but we reasoned that if we installed Linux on them with a relatively lightweight desktop environment, they'd be quite capable of running a web browser and a text editor or IDE, which was all we needed.
 
 <!-- *[IDE]: Integrated Development Environment -->
 
@@ -70,7 +70,7 @@ Great, that's the server side largely sorted. Now, how do we get these kids up a
 
 ## Client-side tech details
 
-I set up the laptops using [Xubuntu](https://xubuntu.org/) (i.e. [Ubuntu Linux](ubuntu.com/), with [Xfce](https://xfce.org/) as the default desktop environment). Using [Clonezilla](https://clonezilla.org/clonezilla-live.php), I was able to create an [SOE](https://en.wikipedia.org/wiki/Standard_Operating_Environment) image of the first laptop, then use IP multicast to duplicate that over the network to all other laptops at once, taking less than hour to do over 20 machines. Gosh I love computers sometimes!
+I set up the laptops using [Xubuntu](https://xubuntu.org/) (i.e. [Ubuntu Linux](ubuntu.com/), with [Xfce](https://xfce.org/) as the default desktop environment). Using [Clonezilla](https://clonezilla.org/clonezilla-live.php), I was able to create an [SOE](https://en.wikipedia.org/wiki/Standard_Operating_Environment) image of the first laptop, then use IP multicast to duplicate that over the network to all other laptops at once, taking less than 30 minutes to do over 20 machines. Gosh I love computers sometimes!
 
 The SOE I'd built was pretty basic: aside from the basic Xubuntu Desktop packages, I only needed to add [Firefox](https://firefox.com) as our web browser, [Visual Studio Code](https://code.visualstudio.com/) with a couple of extensions[^vscode_extensions] for our IDE, and install an SSH server so I could manage the machines remotely if necessary.
 
