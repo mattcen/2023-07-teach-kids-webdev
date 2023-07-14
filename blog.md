@@ -70,7 +70,7 @@ Great, that's the server side largely sorted. Now, how do we get these kids up a
 
 ## Client-side tech details
 
-I set up the laptops using [Xubuntu](https://xubuntu.org/) (i.e. [Ubuntu Linux](ubuntu.com/), with [Xfce](https://xfce.org/) as the default desktop environment). Using [Clonezilla](https://clonezilla.org/clonezilla-live.php), I was able to create an [SOE](https://en.wikipedia.org/wiki/Standard_Operating_Environment) image of the first laptop, then use IP multicast to duplicate that over the network to all other laptops at once, taking less than 30 minutes to do over 20 machines. Gosh I love computers sometimes!
+I set up the laptops using [Xubuntu](https://xubuntu.org/) (i.e. [Ubuntu Linux](ubuntu.com/), with [Xfce](https://xfce.org/) as the default desktop environment). Using [Clonezilla](https://clonezilla.org/clonezilla-live.php), I was able to create an [SOE](https://en.wikipedia.org/wiki/Standard_Operating_Environment) image of the first laptop, then use UDP multicast to duplicate that over the network to all other laptops at once, taking less than an hour to do over 20 machines. Gosh I love computers sometimes!
 
 The SOE I'd built was pretty basic: aside from the basic Xubuntu Desktop packages, I only needed to add [Firefox](https://firefox.com) as our web browser, [Visual Studio Code](https://code.visualstudio.com/) with a couple of extensions[^vscode_extensions] for our IDE, and install an SSH server so I could manage the machines remotely if necessary.
 
@@ -87,6 +87,8 @@ After they were all set up, they naturally tried to get online, only to find tha
 We used this as an impromptu teaching opportunity, and asked them why this might be? One of the responses was that their computers weren't connected to "Wi-Fi", which, while technically true, wasn't the cause of the issue, since they all had functional Ethernet connections. We drew up a crude network diagram, and coached the scouts through the differences between Wi-Fi, a LAN, and the Internet.
 
 With the network theory out of the way, we explained we have our own server set up so that while the scouts can't access the Internet, they can access and store content on this computer in the adjacent room.
+
+## Evening down-time
 
 By this point, it was getting late in the evening, so we called it a night and gave the scouts some time to play around. I set up a [Minetest](https://www.minetest.net/) server (an open-source Minecraft clone), and got all the scouts connected to it. Except for one of the few scouts who had managed to bring their own computer with them. They didn't have Minetest, but they had Minecraft installed, so initially felt quite superiour playing the original game rather than what I think they perceived as a "cheap knock-off of the real thing". This was until they learned about Network Effects. Everyone else was playing a network game all together, shouting at each other from across the room, and this person was in a world all on their own. It wasn't long before they asked if we could get Minetest installed on their computer too!
 
@@ -119,7 +121,6 @@ The broad instructions we gave the scouts for this (albeit with rather more deta
 7. Open Firefox, and browse to http://username.scouthack
 
 And *now* we were starting to see something cool; they'd started to create their own content and could see it at a '.scouthack' domain, so it *looked* kind of like it was on the internet! Better still, they could browse to *each others'* pages and see them too.
-We had them open up VS Code, and use the SSH extension to connect to `username@username.scouthack`, and enter in their passwords when prompted.
 
 ## HTML
 
@@ -152,6 +153,8 @@ We demonstrated how to use various CSS selectors, including element type selecto
 Having covered the ground-work, we introduced CSS attributes, and the scouts set about choosing all sorts of garish colours for their websites. This was aided by the fact that when VS Code is editing a CSS or HTML file, it will show you a colour-selector and preview when you hover over a colour hex-code.
 
 After the kids had their fun, we showed them how to move their CSS to a separate `style.css` file for tidiness.
+
+## Bootstrap
 
 To speed things up from here, we introduced [Bootstrap](https://getbootstrap.com/), and showed how it offered a plethora of pre-configured classes to use. This allowed us to more rapidly style our page to look like the modern websites the scouts are used to, rather than something out of the late '90s.
 
