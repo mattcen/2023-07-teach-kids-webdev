@@ -126,9 +126,9 @@ Notes:
 
 - Scouts Australia has an updated award scheme to recognise youth achievement
 - Broader, less prescriptive
-- One of six new "Special Interest Areas" is "[STEM & Innovation](images/SA.svg)"; includes IT
+- One of six new "Special Interest Areas" is "[STEM & Innovation](images/SI.svg)"; includes IT
 
-![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SA.svg)
+![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SI.svg)
 
 ----
 
@@ -326,6 +326,10 @@ Note:
 
 # Make me a sandwich
 
+![XKCD 149: Sandwich](images/xkcd-149-sandwich.png)
+
+(CC BY-NC 2.5 Randal Munroe)
+
 Note:
 
 - Next morning, after breakfast
@@ -333,6 +337,13 @@ Note:
 - I have an oft-frustrating literal-mindedness
 - Luke decided to leverage it:
 - Have the scouts instruct me to make a sandwich
+
+----
+
+# Make me a sandwich
+
+Note:
+
 - Given:
 	- Loaf of bread in a plastic bag
 	- Tub of butter
@@ -343,6 +354,38 @@ Note:
 - Followed to letter
 - Demonstrated the value of precision
 - Hilarious results
+
+----
+
+<img alt="Matt holding a knife in a scary stabbing motion" src="images/IMG_1577.JPG" height="800px" />
+
+Note:
+
+Matt holding a knife in a scary stabbing motion
+
+----
+
+<img alt="Matt failing to spread Vegemite on bread while holding knife backwards" src="images/IMG_3593.JPG" height="800px" />
+
+Note:
+
+Matt failing to spread Vegemite on bread while holding knife backwards
+
+----
+
+<img alt="Matt trying to pull a twist-top lid off a jam jar" src="images/IMG_1592.JPG" height="800px" />
+
+Note:
+
+Matt trying to pull a twist-top lid off a jam jar
+
+----
+
+<img alt="Matt holding a completed sandwich" src="images/IMG_1602.JPG" height="800px" />
+
+Note:
+
+Matt holding a completed sandwich
 
 ----
 
@@ -517,6 +560,7 @@ Note:
 
 ## Thanks
 
-* Luke - [@ekulbyrnes](https://infosec.exchange/@ekulbyrnes)
+* Luke Byrnes ([@ekulbyrnes@infosec.exchange](https://infosec.exchange/@ekulbyrnes))
 * [Pieper Cafe](http://www.piepercafe.com/) (SE Portland)
 * [FOSSY](https://fossy.us)
+* Andy King - Photos
