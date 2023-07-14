@@ -211,6 +211,15 @@ Note:
 - Install Linux, lightweight DE; sufficiently capable
 - Only need web browser and text editor/IDE
 - Also managed to scrounge enough external keyboards, mice, and VGA monitors for second screen
+
+----
+
+<img alt="Classroom space with 2 projector screens, and around 20 desks with laptops and peripherals" src="images/PXL_20230420_131859432.jpg" height="800px" />
+
+Note:
+
+Classroom space with 2 projector screens, and around 20 desks with laptops and peripherals
+
 - Next problem: power for old inefficient monitors, despite being LCD
 - Managed to book recently-built activity centre at scout camp
 - Self-contained:
@@ -310,6 +319,14 @@ Note:
 
 ----
 
+<img alt="Previous classroom full of scouts mid-session" src="images/IMG_1678.JPG" height="800px" />
+
+Note:
+
+Previous classroom full of scouts mid-session
+
+----
+
 # Evening down-time
 
 Note:
@@ -340,9 +357,11 @@ Note:
 
 ----
 
-# Make me a sandwich
+<img alt="Matt holding a knife in a scary stabbing motion" src="images/IMG_1577.JPG" height="800px" />
 
 Note:
+
+Matt holding a knife in a scary stabbing motion
 
 - Given:
 	- Loaf of bread in a plastic bag
@@ -354,14 +373,6 @@ Note:
 - Followed to letter
 - Demonstrated the value of precision
 - Hilarious results
-
-----
-
-<img alt="Matt holding a knife in a scary stabbing motion" src="images/IMG_1577.JPG" height="800px" />
-
-Note:
-
-Matt holding a knife in a scary stabbing motion
 
 ----
 
