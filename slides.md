@@ -191,10 +191,10 @@ Note:
 - Managed to book recently-built activity centre at scout camp
 - Self-contained:
 	- bunk beds
-    - kitchen
-    - bathrooms
-    - large space for dining/classroom
-    - new electrical wiring!
+	- kitchen
+	- bathrooms
+	- large space for dining/classroom
+	- new electrical wiring!
 - Spread across several electrical circuits, managed to avoid tripping circuit-breakers!
 
 - Campsite was out in the sticks, so no internet, poor cell coverage
@@ -210,23 +210,23 @@ Note:
 - Some switches
 - Many network cables
 - Decided to give scouts a full "VPS". Allow:
-    - Running webserver
-    - Installing packages
-    - Storing files
+	- Running webserver
+	- Installing packages
+	- Storing files
 - Each scout got:
-    - Ubuntu Docker container
-    - SSH server
-    - Standard user account
-    - full `sudo` access
+	- Ubuntu Docker container
+	- SSH server
+	- Standard user account
+	- full `sudo` access
 - Did this with:
-    - sshpiper
-        - reverse proxy gor SSH
-        - person-in-the-middle SSH
-        - routes connections to containers based on username or SSH key
-    - Traefik
-        - reverse HTTP proxy
-        - local DNS with `*.scouthack` pointing to server
-        - Traefik routing `http://username.scouthack` to each container's port 80
+	- sshpiper
+		- reverse proxy gor SSH
+		- person-in-the-middle SSH
+		- routes connections to containers based on username or SSH key
+	- Traefik
+		- reverse HTTP proxy
+		- local DNS with `*.scouthack` pointing to server
+		- Traefik routing `http://username.scouthack` to each container's port 80
 - How do we teach SSH basics without going into great detail?
 
 # Client-side details
@@ -235,13 +235,187 @@ Note:
 - SSHd for remote admin
 - Firefox
 - VS Code
-    - Remote SSH VS Code extension (closed-source; open alternative?)
-- Used Clonezilla to image all other laptops via IP multicast
+	- Remote SSH VS Code extension (closed-source; open alternative?)
+- Used Clonezilla to image all other laptops via UDP multicast
 - Less than an hour to image 20+ machines
 
 # Getting students started
 
-- 
+- Scouts arrive Friday evening
+- We had them assemble their computer. Plug in:
+	- Power
+	- Monitor
+	- Ethernet
+	- Keyboard
+	- Mouse
+- Not hard, but likely new to some
+- They naturally tried to get online, but no internet!
+- "Why can't you get online?"
+- "We're not on Wi-fi"
+- Used this as a teaching opportunity. Distinguished between:
+	- Wi-fi
+	- LAN (over Ethernet)
+	- Internet
+- No internet, *but* have server they can host their websites on
+
+# Evening down-time
+
+- Getting late in evening, so called it a night
+- I set up a Minetest server for them to join
+- Interesting Network Effects side-bar:
+	- One scout had their own laptop the first year
+	- Had Minecraft(TM), and felt superiour
+	- Until realising they were playing alone
+	- Quickly asked if we could install Minetest for them to join the other scouts
+
+# Make me a sandwich
+
+- Next morning, after breakfast
+- Asked scouts what computers do/how they work
+- I have an oft-frustrating literal-mindedness
+- Luke decided to leverage it:
+- Have the scouts instruct me to make a sandwich
+- Given:
+	- Loaf of bread in a plastic bag
+	- Tub of butter
+	- Vegemite/jam
+	- Knife
+	- Plate
+- Deliberately misinterpred instructions
+- Followed to letter
+- Demonstrated the value of precision
+- Hilarious results
+
+# VS Code set-up
+
+Instructed scouts with more detailed version of:
+
+1. Open VS Code
+2. Use the Remote SSH extension to connect to `username@username.scouthack`, and enter your password when prompted
+3. Open the `code` folder we've pre-created for you
+4. Create a file called `index.html`, and put some text in it, then save the file
+5. Use <kbd>Ctrl</kbd>+<kbd>\`</kbd> to open a terminal
+6. Type `python -m http.server 80` and press enter
+7. Open Firefox, and browse to http://username.scouthack
+
+- Whoa, we published a website!
+- That other scouts could browse to!
+
+# HTML
+
+Covered basic HTML Tags:
+
+1. Text ("hello world")
+2. headings (`<h1>`-`<h6>`)
+3. newlines (`<br>`)
+4. bold (`<b>`, then `<strong>`)
+5. italics (`<i>`, then `<em>`)
+6. paragraphs (`<p>`)
+7. images (`<img>foo</img>`, then `<img alt="foo" src="./foo.jpg">foo</img>`, then `<img alt="foo" src="./foo.jpg"/>`)
+8. New doc (`foo.html`)
+9. links (`<a href="foo.html">foo</a>`)
+10. lists (`<ol>`, `<ul>`)
+12. tables (`<table><thead><tr><th>foo</th></tr></thead><tbody><tr><td>bar</td><td>quux</td></tr></tbody></table>`)
+
+Broke for lunch, before preparing to teach CSS
+
+# CSS
+
+- We have basic HTML, let's style it
+- Introduced CSS colo<del>u</del>rs
+	- Some colours can be referred to by name
+	- The rest need RGB (or HSL, which we didn't cover)
+	- decimal or hexadecimal
+- Add CSS to page so we can colour it:
+	- inline style attributes first
+	- then use \<style\> in \<head\>
+- CSS selectors:
+	- element type selectors
+	- class selectors
+	- id selectors
+- CSS attributes: `color`, `background-color`, etc
+- So garish!
+- VS Code shows colour preview/picker on hover
+- Move CSS to a `style.css` file
+
+# Bootstrap
+
+- Introduce Bootstrap
+- Pre-build CSS classes
+- Rapid styling
+- Modern-looking; less '90s
+
+Then, more Minetest!
+
+# Server-side scripting
+
+- Built a simple Python Flask web server
+- Goal:
+	- Submit "program ideas" for scout groups
+	- List submitted "program ideas"
+- Web form:
+	- author: input box
+	- idea: text area
+- I synthesised a git repo:
+- every commit was 1 step
+- shell script loop through commits to show outcome
+- show commit diff in forge
+
+https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
+
+The general process here was:
+1. Create and activate a Python `venv`
+2. `pip install flask`
+3. Create a basic `website.py` file (8 lines of code) and make it executable with `chmod +x`
+4. Move existing `index.html` to a `templates/` folder where Flask can find it
+5. Run `./website.py`
+6. Browse to http://username.scouthack to see existing web page, albeit without other resources (images, CSS etc)
+7. Move other static assets into a `static/` folder for Flask, and update references in HTML
+8. Update HTML to template it with Jinja2
+9. Add HTML form to submit programme idea
+10. Write Python code to store form submission in a CSV file
+11. Write code to parse CSV and show programme list as HTML
+
+- Biggest challenge: typos
+- Scouts had fun reading and adding to each others' programme lists
+
+# Wrapping up
+
+- In remaining time, scouts tweaked websites as they wished
+- Had them shut down and dissassemble computers
+- Pack up their gear, prepare for home
+- Promised to zip up their websites and send them to them after camp
+
+# Lessons learned
+
+- Typos
+	- touch-screen users less used-to keyboard/mice
+	- no biggie with HTML/CSS
+	- Python less forgiving
+	- Trivial syntax errors despite request to copy precisely and double-check
+	- I diff'd scouts' code with mine server-side to speed through typos
+	- Couldn't teach them to debug, but at least they got something that worked
+	- Use Werkzeug debugger in future
+- Winging coursework
+	- Worked first couple of times
+	- Reduce ongoing effort with tighter material
+	- Couldn't re-use my Flask app from last time - scouts were starting from different files
+	- Had to review websites during downtime to bring up to speed
+	- More typos
+	- Despite reviewing websites, scouts accidentally deleted large code blocks
+	- Maybe give scouts fresh template at start of each session?
+- Web-based editor
+	- OpenVSCode Server
+	- Jupyter Lab
+	- VS Code is good because it's easy for scouts to set up at home
+
+# Conclusion
+
+- Very positive feedback from ScoutHack attendees/parents
+- Several returning members
+	- They worked on their own projects while we covered course material
+	- Intend to offer "Webdev 2.0" (more Flask/FastAPI/Django) or "DevOps 1.0" (set up the VPS/web server)
+- Looking forward to future courses
 
 ----
 
