@@ -52,6 +52,14 @@ Note:
 
 Note:
 
+I'd like to affirm that these are the rightful lands of the Multnomah, Kathlamet, and Clackamas bands of the Chinuk, Tualitin Kalapuya, Molalla, Tenino, Wasco, Wishram, Paiute, and the many other Native people who live here and who have always lived here.
+
+These Tribal Nations belong to and care for this land and I honor these Nations’ continued existence and resilience, as their sacrifices are still ongoing.
+
+I acknowledge their long-lasting and tireless work to nurture, advocate, and protect these lands in the Pacific Northwest.
+
+-- https://bark-out.org/news/indigenous-peoples-day/
+
 ---
 
 ## Proprietary software statement
@@ -84,11 +92,14 @@ Note:
 
 ## Talk Overview
 
-- Inception
-- Objectives
-- Process
-- Delivery
-- Review
+- My Scouting History
+- Course Inception
+- Course Objectives
+- Logistics
+- Server-side tech details
+- Client-side tech details
+- Course recount
+- Lessons learned
 
 Combination of story time and technical details
 
@@ -100,7 +111,6 @@ Note:
   Start commit: https://github.com/Scouts-Victoria-Program/scouthack_flask_2023/commit/4d87000 or https://git.mattcen.com/mattcen/scouthack_flask/commit/4d87000
 
 ---
-
 
 # What is scouts?
 
@@ -142,7 +152,11 @@ Notes:
 - since been leader of adults (training other leaders)
 - also activity leader (facilitating state-wide events for scouts of all ages)
 
+----
+
 # Full-circle
+
+Note:
 
 - Increasingly found myself staring at screen for scout work
 - Recently been using IT skills for scouts
@@ -151,11 +165,13 @@ Notes:
 - fellow leaders are IT folk, but much work fell to me
 - also, we wouldn't be around forever, so needed to succession plan
 
-----
-
-Note:
+---
 
 # ScoutHack inception
+
+<img alt="ScoutHack logo. A green monospaced font on a black background, which says 'scout@hack:~\$' in the style of a shell prompt" src="images/scouthack.svg" width="800px"/>
+
+Note:
 
 - Leverage Youth Leading, Adults Supporting
 - Hand down to youth
@@ -166,7 +182,11 @@ Note:
 - Coined "ScoutHack", decided on 2-day camp
 - Began weekly planning via Jitsi
 
+----
+
 # Syllabus
+
+Note:
 
 - HTML
 - CSS
@@ -177,7 +197,11 @@ Note:
 - Just walking through step-by-step gives a taste
 - They can pursue in future, individually or at potential "ScoutHack 2.0"
 
+----
+
 # Event logistics
+
+Note:
 
 - Goals set; what resources do we need?
 - To optimise accessibility, don't require BYO computer
@@ -197,6 +221,12 @@ Note:
 	- new electrical wiring!
 - Spread across several electrical circuits, managed to avoid tripping circuit-breakers!
 
+----
+
+# Location challenges
+
+Note:
+
 - Campsite was out in the sticks, so no internet, poor cell coverage
 - How do we teach web dev without internet?
 - Run local server
@@ -204,7 +234,15 @@ Note:
 - Wanted to give feeling of hosting where others could access
 - Devised bigger plans
 
+---
+
+# Technical details
+
+----
+
 # Server-side tech details
+
+Note:
 
 - Found old rack-mount server
 - Some switches
@@ -229,7 +267,11 @@ Note:
 		- Traefik routing `http://username.scouthack` to each container's port 80
 - How do we teach SSH basics without going into great detail?
 
-# Client-side details
+----
+
+# Client-side tech details
+
+Note:
 
 - Laptops running Xubuntu (Ubuntu with XFCE)
 - SSHd for remote admin
@@ -239,7 +281,15 @@ Note:
 - Used Clonezilla to image all other laptops via UDP multicast
 - Less than an hour to image 20+ machines
 
+---
+
+# Course recount
+
+----
+
 # Getting students started
+
+Note:
 
 - Scouts arrive Friday evening
 - We had them assemble their computer. Plug in:
@@ -258,7 +308,11 @@ Note:
 	- Internet
 - No internet, *but* have server they can host their websites on
 
+----
+
 # Evening down-time
+
+Note:
 
 - Getting late in evening, so called it a night
 - I set up a Minetest server for them to join
@@ -268,7 +322,11 @@ Note:
 	- Until realising they were playing alone
 	- Quickly asked if we could install Minetest for them to join the other scouts
 
+----
+
 # Make me a sandwich
+
+Note:
 
 - Next morning, after breakfast
 - Asked scouts what computers do/how they work
@@ -286,7 +344,11 @@ Note:
 - Demonstrated the value of precision
 - Hilarious results
 
+----
+
 # VS Code set-up
+
+Note:
 
 Instructed scouts with more detailed version of:
 
@@ -301,7 +363,11 @@ Instructed scouts with more detailed version of:
 - Whoa, we published a website!
 - That other scouts could browse to!
 
+----
+
 # HTML
+
+Note:
 
 Covered basic HTML Tags:
 
@@ -319,7 +385,11 @@ Covered basic HTML Tags:
 
 Broke for lunch, before preparing to teach CSS
 
+----
+
 # CSS
+
+Note:
 
 - We have basic HTML, let's style it
 - Introduced CSS colo<del>u</del>rs
@@ -338,7 +408,11 @@ Broke for lunch, before preparing to teach CSS
 - VS Code shows colour preview/picker on hover
 - Move CSS to a `style.css` file
 
+----
+
 # Bootstrap
+
+Note:
 
 - Introduce Bootstrap
 - Pre-build CSS classes
@@ -347,7 +421,11 @@ Broke for lunch, before preparing to teach CSS
 
 Then, more Minetest!
 
+----
+
 # Server-side scripting
+
+Note:
 
 - Built a simple Python Flask web server
 - Goal:
@@ -362,6 +440,12 @@ Then, more Minetest!
 - show commit diff in forge
 
 https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
+
+----
+
+# Server-side scripting
+
+Note:
 
 The general process here was:
 1. Create and activate a Python `venv`
@@ -379,14 +463,22 @@ The general process here was:
 - Biggest challenge: typos
 - Scouts had fun reading and adding to each others' programme lists
 
+----
+
 # Wrapping up
+
+Note:
 
 - In remaining time, scouts tweaked websites as they wished
 - Had them shut down and dissassemble computers
 - Pack up their gear, prepare for home
 - Promised to zip up their websites and send them to them after camp
 
+---
+
 # Lessons learned
+
+Note:
 
 - Typos
 	- touch-screen users less used-to keyboard/mice
@@ -409,37 +501,22 @@ The general process here was:
 	- Jupyter Lab
 	- VS Code is good because it's easy for scouts to set up at home
 
+----
+
 # Conclusion
 
 - Very positive feedback from ScoutHack attendees/parents
 - Several returning members
 	- They worked on their own projects while we covered course material
 	- Intend to offer "Webdev 2.0" (more Flask/FastAPI/Django) or "DevOps 1.0" (set up the VPS/web server)
+	- Also red/blue/purple team infosec
 - Looking forward to future courses
 
-----
-
-<img alt="ScoutHack logo. A green monospaced font on a black background, which says 'scout@hack:~\$' in the style of a shell prompt" src="images/scouthack.svg" width="400px"/>
-
 ---
 
-## Conclusion
-
-Note:
-
----
 
 ## Thanks
 
 * Luke - [@ekulbyrnes](https://infosec.exchange/@ekulbyrnes)
 * [Pieper Cafe](http://www.piepercafe.com/) (SE Portland)
 * [FOSSY](https://fossy.us)
-
-Note:
-
----
-
-## References
-
-Note:
-
