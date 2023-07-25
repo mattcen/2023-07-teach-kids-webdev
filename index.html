@@ -26,6 +26,18 @@
 			font-size: 1.75vw;
 		}
 
+		.header ul {
+			margin: 0;
+		}
+
+		.header li {
+			display: inline;
+		}
+
+		.header li + li::before {
+			content: " | ";
+		}
+
 		.header span:nth-of-type(1) {
 			text-align: left;
 		}
@@ -56,7 +68,14 @@
 		</div>
 	</div>
 	<div id="header-content" class="header">
-		<span class="element">@mattcen@aus.social | #nbpy | #TeachKidsWebDev | github.com/mattcen/2023-07-teach-kids-webdev</span>
+		<span class="element">
+			<ul>
+				<li>@mattcen@aus.social</li>
+				<li>#nbpy</li>
+				<li>#TeachKidsWebDev</li>
+				<li>github.com/mattcen/2023-07-teach-kids-webdev</li>
+			</ul>
+		</span>
 	</div>
 
 	<script src="reveal.js/dist/reveal.js"></script>
