@@ -43,7 +43,7 @@ Note:
 
 - I'm Matt (they/them)
 - Find me by handle, M A T T C E N
-- Post about talk using #FOSSY and #TeachKidsWebDev
+- Post about talk using #nbpy and #TeachKidsWebDev
 - Slides available on GitHub: https://github.com/mattcen/2023-07-teach-kids-webdev
 
 ---
@@ -272,7 +272,7 @@ Note:
 	- full `sudo` access
 - Did this with:
 	- sshpiper
-		- reverse proxy gor SSH
+		- reverse proxy for SSH
 		- person-in-the-middle SSH
 		- routes connections to containers based on username or SSH key
 	- Traefik
