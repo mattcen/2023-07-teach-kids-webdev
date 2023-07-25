@@ -123,12 +123,11 @@ Notes:
 - Scouts Australia is inclusive to all genders etc., welcomes youth from 5-26 years, all adults
 - Not just outdoor stuff anymore
 - Anything the scouts want; [Youth Leading, Adults Supporting](images/YA.svg)
-
 - Scouts Australia has an updated award scheme to recognise youth achievement
 - Broader, less prescriptive
 - One of six new "Special Interest Areas" is "[STEM & Innovation](images/SI.svg)"; includes IT
 
-![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SI.svg)
+<!--![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SI.svg)-->
 
 ----
 
@@ -339,7 +338,7 @@ Note:
 	- Until realising they were playing alone
 	- Quickly asked if we could install Minetest for them to join the other scouts
 
-----
+---
 
 # Make me a sandwich
 
@@ -398,7 +397,7 @@ Note:
 
 Matt holding a completed sandwich
 
-----
+---
 
 # VS Code set-up
 
