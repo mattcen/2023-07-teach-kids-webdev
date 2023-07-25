@@ -52,13 +52,9 @@ Note:
 
 Note:
 
-I'd like to affirm that these are the rightful lands of the Multnomah, Kathlamet, and Clackamas bands of the Chinuk, Tualitin Kalapuya, Molalla, Tenino, Wasco, Wishram, Paiute, and the many other Native people who live here and who have always lived here.
-
-These Tribal Nations belong to and care for this land and I honor these Nations’ continued existence and resilience, as their sacrifices are still ongoing.
-
-I acknowledge their long-lasting and tireless work to nurture, advocate, and protect these lands in the Pacific Northwest.
-
--- https://bark-out.org/news/indigenous-peoples-day/
+I'm delivering this presentation on the unceded ancenstral lands of many Indigenous peoples.
+I honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
+I pledge to do my best to respect, learn from, and support these peoples. We can all do better.
 
 ---
 
