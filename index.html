@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+	<!-- TODO: Set title here -->
 	<title>reveal.js</title>
 
 	<link rel="stylesheet" href="reveal.js/dist/reset.css">
@@ -24,6 +25,7 @@
 		.header span {
 			display: block;
 			font-family: "Roboto Mono", monospace;
+			/* TODO: Alter font size to ensure header fits viewport width */
 			font-size: 1.75vw;
 		}
 
@@ -90,12 +92,14 @@
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
 		socket_server = 'https://reveal-multiplex.glitch.me'; // Location of socket.io server for multiplex
+		// TODO: Set socket server here
 		Reveal.initialize({
 			hash: true,
 			hashOneBasedIndex: true,
 			transition: 'fade',
 			controls: false,
 			slideNumber: 'c/t',
+			// TODO: Set presentation duration (in seconds) here
 			totalTime: 25 * 60,
 			defaultTiming: 10,
 			minimumTiming: 5,
@@ -108,14 +112,17 @@
 			multiplex: {
 				// Example values. To generate your own, see the socket.io server instructions.
 				// For presenter:
+				// TODO: Set secret for presenter here
 				//secret: '00000000000000000000', // Obtained from the socket.io server. Gives this (the master) control of the presentation
 				// For viewer
 				secret: null, // null so the clients do not have control of the master presentation
 				id: '0123456789abcdef', // Obtained from socket.io server
+				// TODO: Set id for client here
 				url: socket_server
 			},
 			// Multiplex dependencies
 			dependencies: [
+				// TODO: Uncomment this to use slide multiplex. Also uncomment ONE of the presenter/viewer lines below
 				//{ src: socket_server + '/socket.io/socket.io.js', async: true },
 				// For presenter
 				//{ src: socket_server + '/master.js', async: true },
