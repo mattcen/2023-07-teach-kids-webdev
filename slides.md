@@ -130,6 +130,7 @@ Notes:
 <!--![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SI.svg)-->
 
 ----
+<!-- .slide: data-background-color="blue" -->
 
 # My history in scouting
 
@@ -152,6 +153,7 @@ Notes:
 - also activity leader (facilitating state-wide events for scouts of all ages)
 
 ----
+<!-- .slide: data-background-color="blue" -->
 
 # Full-circle
 
@@ -417,6 +419,7 @@ Instructed scouts with more detailed version of:
 - That other scouts could browse to!
 
 ----
+<!-- .slide: data-background-color="blue" -->
 
 # HTML
 
@@ -439,6 +442,7 @@ Covered basic HTML Tags:
 Broke for lunch, before preparing to teach CSS
 
 ----
+<!-- .slide: data-background-color="blue" -->
 
 # CSS
 
@@ -495,6 +499,7 @@ Note:
 https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
 
 ----
+<!-- .slide: data-background-color="blue" -->
 
 # Server-side scripting
 
