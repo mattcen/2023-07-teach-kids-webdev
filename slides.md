@@ -12,7 +12,13 @@ slideOptions:
   defaultTiming: 10
   minimumTiming: 5
   autoSlideStoppable: false
-  plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  plugins:
+  - RevealMarkdown
+  - RevealHighlight
+  - RevealSearch
+  - RevealNotes
+  - RevealMath
+  - RevealZoom
 attributes: '<!-- .slide: data-visibility="hidden" -->'
 ---
 
@@ -112,7 +118,7 @@ Note:
 
 <img alt="Scouts Victoria logo" src="images/ScoutsVIC-Vert-11Col.svg" width="400px"/>
 
-Notes:
+Note:
 
 - I'm a Scout Leader in Australia
 - some folks think of "boy scouts" [camping/hiking/constructing things with wood and rope](https://en.wikipedia.org/wiki/Scouting_for_Boys), or "girl scouts" and their cookies
@@ -126,11 +132,12 @@ Notes:
 <!--![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SI.svg)-->
 
 ----
+
 <!-- .slide: data-background-color="blue" -->
 
 # My history in scouting
 
-Notes:
+Note:
 
 - Been involved since I was 8
 - Besides outdoor skills, also life skills:
@@ -149,6 +156,7 @@ Notes:
 - also activity leader (facilitating state-wide events for scouts of all ages)
 
 ----
+
 <!-- .slide: data-background-color="blue" -->
 
 # Full-circle
@@ -415,6 +423,7 @@ Instructed scouts with more detailed version of:
 - That other scouts could browse to!
 
 ----
+
 <!-- .slide: data-background-color="blue" -->
 
 # HTML
@@ -438,6 +447,7 @@ Covered basic HTML Tags:
 Broke for lunch, before preparing to teach CSS
 
 ----
+
 <!-- .slide: data-background-color="blue" -->
 
 # CSS
@@ -495,6 +505,7 @@ Note:
 https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
 
 ----
+
 <!-- .slide: data-background-color="blue" -->
 
 # Server-side scripting
@@ -521,6 +532,7 @@ The general process here was:
 # Python code walk-through
 
 ----
+
 <!-- .slide: data-auto-animate -->
 ```python []
 #!/usr/bin/env python
@@ -541,6 +553,7 @@ if __name__ == "__main__":
 <!-- .element: data-id="code-animation" -->
 
 ----
+
 <!-- .slide: data-auto-animate -->
 ```python [10]
 #!/usr/bin/env python
@@ -561,6 +574,7 @@ if __name__ == "__main__":
 <!-- .element: data-id="code-animation" -->
 
 ----
+
 <!-- .slide: data-visibility="hidden" -->
 ```python [13-15]
 #!/usr/bin/env python
@@ -586,6 +600,7 @@ if __name__ == "__main__":
 <!-- .element: data-id="code-animation" -->
 
 ----
+
 <!-- .slide: data-visibility="hidden" -->
 ```python [14-16]
 #!/usr/bin/env python
@@ -612,6 +627,7 @@ if __name__ == "__main__":
 <!-- .element: data-id="code-animation" -->
 
 ----
+
 <!-- .slide: data-auto-animate -->
 ```python [19-21]
 #!/usr/bin/env python
@@ -643,6 +659,7 @@ if __name__ == "__main__":
 <!-- .element: data-id="code-animation" -->
 
 ----
+
 <!-- .slide: data-auto-animate -->
 ```python [3,6-7|22-35]
 #!/usr/bin/env python
@@ -688,6 +705,7 @@ if __name__ == "__main__":
 <!-- .element: data-id="code-animation" -->
 
 ----
+
 <!-- .slide: data-auto-animate -->
 ```python [22-33|47]
 #!/usr/bin/env python
