@@ -46,3 +46,8 @@
 .reveal pre code {
 	max-height: 100%;
 }
+
+.reveal .slide-menu-button {
+	left: unset;
+	right: 30px;
+}

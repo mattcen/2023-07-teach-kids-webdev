@@ -23,6 +23,7 @@ Reveal.initialize({
 		RevealSearch,
 		RevealNotes,
 		RevealMath,
+		RevealMenu,
 		RevealZoom
 	],
 
@@ -37,6 +38,21 @@ Reveal.initialize({
 		id: '0123456789abcdef', // Obtained from socket.io server
 		url: socket_server
 	},
+
+	menu: {
+		side: 'right',
+		themes: [
+			{ name: 'Black',
+				theme: 'reveal.js/dist/theme/black-contrast.css',
+				highlightTheme: 'css/highlight/a11y-dark.css' },
+			{ name: 'White',
+				theme: 'reveal.js/dist/theme/white-contrast.css',
+				highlightTheme: 'css/highlight/a11y-light.css' },
+			],
+		// ['None', 'Fade', 'Slide']
+		transitions: true,
+	},
+
 	// Multiplex dependencies
 	dependencies: [
 		// TODO: Uncomment this to use slide multiplex. Also uncomment ONE of the presenter/viewer lines below
