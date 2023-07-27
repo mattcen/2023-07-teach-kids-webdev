@@ -12,56 +12,6 @@
 	<link rel="stylesheet" href="reveal.js/dist/reveal.css">
 	<!--link rel="stylesheet" href="reveal.js/dist/theme/black-contrast.css" id="theme"-->
 	<link rel="stylesheet" href="reveal.js/dist/theme/white-contrast.css" id="theme">
-	<style type="text/css">
-		.header {
-			position: absolute;
-			display: block;
-			top: 2%;
-			width: 100%;
-			color: var(--color-primary-2);
-			z-index: 10;
-		}
-
-		.header span {
-			display: block;
-			font-family: "Roboto Mono", monospace;
-			/* TODO: Alter font size to ensure header fits viewport width */
-			font-size: 1.9vw;
-		}
-
-		.header ul {
-			margin: 0;
-		}
-
-		.header a {
-			color: var(--color-primary-2);
-			text-decoration: underline;
-		}
-
-		.header li {
-			display: inline;
-		}
-
-		.header li + li::before {
-			content: " | ";
-		}
-
-		.header span:nth-of-type(1) {
-			text-align: left;
-		}
-
-		.header span:nth-last-child(1) {
-			text-align: right;
-		}
-
-		.header span:only-of-type {
-			text-align: center;
-		}
-
-		.reveal pre code {
-			max-height: 650px;
-		}
-	</style>
 
 	<!-- Theme used for syntax highlighted code -->
 	<!--link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme"-->
@@ -102,62 +52,8 @@
 	<script src="reveal.js/plugin/notes/notes.js"></script>
 	<script src="reveal.js/plugin/math/math.js"></script>
 	<script src="reveal.js/plugin/zoom/zoom.js"></script>
-	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
-		socket_server = 'https://reveal-multiplex.glitch.me'; // Location of socket.io server for multiplex
-		// TODO: Set socket server here
-		Reveal.initialize({
-			hash: true,
-			hashOneBasedIndex: true,
-			transition: 'fade',
-			controls: false,
-			slideNumber: 'c/t',
-			// TODO: Set presentation duration (in seconds) here
-			totalTime: 25 * 60,
-			defaultTiming: 10,
-			minimumTiming: 5,
-			width: 560 * 2.5,
-			height: 300 * 2.5,
-			autoSlideStoppable: false,
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [
-				RevealMarkdown,
-				RevealHighlight,
-				RevealSearch,
-				RevealNotes,
-				RevealMath,
-				RevealZoom
-			],
-
-			multiplex: {
-				// Example values. To generate your own, see the socket.io server instructions.
-				// For presenter:
-				// TODO: Set secret for presenter here
-				//secret: '00000000000000000000', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-				// For viewer
-				secret: null, // null so the clients do not have control of the master presentation
-				id: '0123456789abcdef', // Obtained from socket.io server
-				// TODO: Set id for client here
-				url: socket_server
-			},
-			// Multiplex dependencies
-			dependencies: [
-				// TODO: Uncomment this to use slide multiplex. Also uncomment ONE of the presenter/viewer lines below
-				//{ src: socket_server + '/socket.io/socket.io.js', async: true },
-				// For presenter
-				//{ src: socket_server + '/master.js', async: true },
-				// For viewer
-				//{ src: socket_server + '/client.js', async: true },
-			]
-		});
-		window.addEventListener("load", function () {
-			revealDiv = document.querySelector("body div.reveal")
-			header = document.getElementById("header-content");
-			revealDiv.appendChild(header);
-		});
-	</script>
+	<script src="js/reveal-config.js"></script>
+	<link rel="stylesheet" href="css/reveal-override.css">
 </body>
 
 </html>

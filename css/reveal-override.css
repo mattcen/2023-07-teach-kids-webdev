@@ -1,0 +1,48 @@
+.header {
+	position: absolute;
+	display: block;
+	top: 2%;
+	width: 100%;
+	color: var(--color-primary-2);
+	z-index: 10;
+}
+
+.header span {
+	display: block;
+	font-family: "Roboto Mono", monospace;
+	/* TODO: Alter font size to ensure header fits viewport width */
+	font-size: 1.9vw;
+}
+
+.header ul {
+	margin: 0;
+}
+
+.header a {
+	color: var(--color-primary-2);
+	text-decoration: underline;
+}
+
+.header li {
+	display: inline;
+}
+
+.header li + li::before {
+	content: " | ";
+}
+
+.header span:nth-of-type(1) {
+	text-align: left;
+}
+
+.header span:nth-last-child(1) {
+	text-align: right;
+}
+
+.header span:only-of-type {
+	text-align: center;
+}
+
+.reveal pre code {
+	max-height: 650px;
+}
