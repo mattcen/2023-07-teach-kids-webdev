@@ -2,7 +2,7 @@
 // - https://revealjs.com/initialization/
 // - https://revealjs.com/config/
 // TODO: Set socket server here
-socket_server = 'https://reveal-multiplex.glitch.me'; // Location of socket.io server for multiplex
+socket_server = 'https://familiar-kiwi-iguanodon.glitch.me'; // Location of socket.io server for multiplex
 Reveal.initialize({
 	hash: true,
 	hashOneBasedIndex: true,
@@ -37,7 +37,7 @@ Reveal.initialize({
 		// For viewer
 		secret: null, // null so the clients do not have control of the master presentation
 		// TODO: Set id for client here
-		id: '0123456789abcdef', // Obtained from socket.io server
+		id: '557d20e1b2b12563', // Obtained from socket.io server
 		url: socket_server
 	},
 
@@ -58,11 +58,11 @@ Reveal.initialize({
 	// Multiplex dependencies
 	dependencies: [
 		// TODO: Uncomment this to use slide multiplex. Also uncomment ONE of the presenter/viewer lines below
-		//{ src: socket_server + '/socket.io/socket.io.js', async: true },
+		{ src: socket_server + '/socket.io/socket.io.js', async: true },
 		// For presenter
 		//{ src: socket_server + '/master.js', async: true },
 		// For viewer
-		//{ src: socket_server + '/client.js', async: true },
+		{ src: socket_server + '/client.js', async: true },
 	]
 });
 window.addEventListener("load", function () {
