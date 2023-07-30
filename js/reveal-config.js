@@ -1,8 +1,8 @@
 // More info about initialization & config:
 // - https://revealjs.com/initialization/
 // - https://revealjs.com/config/
-socket_server = 'https://reveal-multiplex.glitch.me'; // Location of socket.io server for multiplex
 // TODO: Set socket server here
+socket_server = 'https://reveal-multiplex.glitch.me'; // Location of socket.io server for multiplex
 Reveal.initialize({
 	hash: true,
 	hashOneBasedIndex: true,
@@ -15,7 +15,9 @@ Reveal.initialize({
 	minimumTiming: 5,
 	width: 560 * 2.5,
 	height: 300 * 2.5,
-	autoSlideStoppable: false,
+	//autoSlide: 5000,
+	//showNotes: true,
+	//autoSlideStoppable: false,
 	// Learn about plugins: https://revealjs.com/plugins/
 	plugins: [
 		RevealMarkdown,
