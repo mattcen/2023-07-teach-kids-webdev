@@ -11,7 +11,7 @@
 	display: block;
 	font-family: "Roboto Mono", monospace;
 	/* TODO: Alter font size to ensure header fits viewport width */
-	font-size: 1.9vw;
+	font-size: 1.4vw;
 }
 
 .header ul {
