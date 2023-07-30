@@ -19,8 +19,10 @@ slideOptions:
   - RevealNotes
   - RevealMath
   - RevealZoom
-attributes: '<!-- .slide: data-visibility="hidden" -->'
+attributes: '<!-- data-autoslide="0" .slide: data-visibility="hidden" -->'
 ---
+
+<!-- .slide: data-autoslide="10000" -->
 
 ## Developing Labs for Teaching Kids Webdev
 
@@ -48,11 +50,15 @@ Note:
 
 ---
 
+<!-- .slide: data-autoslide="20000" -->
+
 ## Slides
 
 [![https://github.com/mattcen/2023-07-teach-kids-webdev](images/repo_url.svg)](https://github.com/mattcen/2023-07-teach-kids-webdev)
 
 ---
+
+<!-- .slide: data-autoslide="20000" -->
 
 ## Acknowledgements
 
@@ -63,6 +69,8 @@ I honour the knowledge, stewardship, and care with which they've tended this lan
 I pledge to do my best to respect, learn from, and support these peoples. We can all do better.
 
 ---
+
+<!-- .slide: data-autoslide="10000" -->
 
 ## Proprietary software statement
 
@@ -78,6 +86,8 @@ Note:
 
 ---
 
+<!-- .slide: data-autoslide="10000" -->
+
 ## My experience
 
 - Scout Leader
@@ -91,6 +101,8 @@ Note:
 - Enjoy solving problems and developing systems
 
 ---
+
+<!-- .slide: data-autoslide="20000" -->
 
 ## Talk Overview
 
@@ -114,6 +126,8 @@ Note:
 
 ---
 
+<!-- .slide: data-autoslide="20000" -->
+
 # What is scouts?
 
 <img alt="Scouts Victoria logo" src="images/ScoutsVIC-Vert-11Col.svg" width="400px"/>
@@ -132,8 +146,6 @@ Note:
 <!--![STEM & Innovation SIA logo; the outline of a white magnifying glass with a red circle as its background](images/SI.svg)-->
 
 ----
-
-<!-- .slide: data-background-color="blue" -->
 
 # My history in scouting
 
@@ -157,8 +169,6 @@ Note:
 
 ----
 
-<!-- .slide: data-background-color="blue" -->
-
 # Full-circle
 
 Note:
@@ -171,6 +181,8 @@ Note:
 - also, we wouldn't be around forever, so needed to succession plan
 
 ---
+
+<!-- .slide: data-autoslide="30000" -->
 
 # ScoutHack inception
 
@@ -189,6 +201,8 @@ Note:
 
 ----
 
+<!-- .slide: data-autoslide="20000" -->
+
 # Syllabus
 
 Note:
@@ -204,6 +218,8 @@ Note:
 
 ----
 
+<!-- .slide: data-autoslide="20000" -->
+
 # Event logistics
 
 Note:
@@ -218,6 +234,8 @@ Note:
 - Also managed to scrounge enough external keyboards, mice, and VGA monitors for second screen
 
 ----
+
+<!-- .slide: data-autoslide="30000" -->
 
 <img alt="Classroom space with 2 projector screens, and around 20 desks with laptops and peripherals" src="images/PXL_20230420_131859432.jpg" height="800px" />
 
@@ -237,6 +255,8 @@ Classroom space with 2 projector screens, and around 20 desks with laptops and p
 
 ----
 
+<!-- .slide: data-autoslide="20000" -->
+
 # Location challenges
 
 Note:
@@ -250,9 +270,13 @@ Note:
 
 ---
 
+<!-- .slide: data-autoslide="3000" -->
+
 # Technical details
 
 ----
+
+<!-- .slide: data-autoslide="60000" -->
 
 # Server-side tech details
 
@@ -283,6 +307,8 @@ Note:
 
 ----
 
+<!-- .slide: data-autoslide="20000" -->
+
 # Client-side tech details
 
 Note:
@@ -297,9 +323,13 @@ Note:
 
 ---
 
+<!-- .slide: data-autoslide="3000" -->
+
 # Course recount
 
 ----
+
+<!-- .slide: data-autoslide="60000" -->
 
 # Getting students started
 
@@ -324,6 +354,8 @@ Note:
 
 ----
 
+<!-- .slide: data-autoslide="10000" -->
+
 <img alt="Previous classroom full of scouts mid-session" src="images/IMG_1678.JPG" height="800px" />
 
 Note:
@@ -331,6 +363,8 @@ Note:
 Previous classroom full of scouts mid-session
 
 ----
+
+<!-- .slide: data-autoslide="20000" -->
 
 # Evening down-time
 
@@ -345,6 +379,8 @@ Note:
 	- Quickly asked if we could install Minetest for them to join the other scouts
 
 ---
+
+<!-- .slide: data-autoslide="30000" -->
 
 # Make me a sandwich
 
@@ -361,6 +397,8 @@ Note:
 - Have the scouts instruct me to make a sandwich
 
 ----
+
+<!-- .slide: data-autoslide="30000" -->
 
 <img alt="Matt holding a knife in a scary stabbing motion" src="images/IMG_1577.JPG" height="800px" />
 
@@ -381,6 +419,8 @@ Matt holding a knife in a scary stabbing motion
 
 ----
 
+<!-- .slide: data-autoslide="10000" -->
+
 <img alt="Matt failing to spread Vegemite on bread while holding knife backwards" src="images/IMG_3593.JPG" height="800px" />
 
 Note:
@@ -388,6 +428,8 @@ Note:
 Matt failing to spread Vegemite on bread while holding knife backwards
 
 ----
+
+<!-- .slide: data-autoslide="10000" -->
 
 <img alt="Matt trying to pull a twist-top lid off a jam jar" src="images/IMG_1592.JPG" height="800px" />
 
@@ -397,6 +439,8 @@ Matt trying to pull a twist-top lid off a jam jar
 
 ----
 
+<!-- .slide: data-autoslide="10000" -->
+
 <img alt="Matt holding a completed sandwich" src="images/IMG_1602.JPG" height="800px" />
 
 Note:
@@ -404,6 +448,8 @@ Note:
 Matt holding a completed sandwich
 
 ---
+
+<!-- .slide: data-autoslide="60000" -->
 
 # VS Code set-up
 
@@ -423,8 +469,6 @@ Instructed scouts with more detailed version of:
 - That other scouts could browse to!
 
 ----
-
-<!-- .slide: data-background-color="blue" -->
 
 # HTML
 
@@ -447,8 +491,6 @@ Covered basic HTML Tags:
 Broke for lunch, before preparing to teach CSS
 
 ----
-
-<!-- .slide: data-background-color="blue" -->
 
 # CSS
 
@@ -473,6 +515,8 @@ Note:
 
 ----
 
+<!-- .slide: data-autoslide="20000" -->
+
 # Bootstrap
 
 Note:
@@ -485,6 +529,8 @@ Note:
 Then, more Minetest!
 
 ----
+
+<!-- .slide: data-autoslide="30000" -->
 
 # Server-side scripting
 
@@ -505,8 +551,6 @@ Note:
 https://git.mattcen.com/mattcen/scouthack_flask/commits/branch/main
 
 ----
-
-<!-- .slide: data-background-color="blue" -->
 
 # Server-side scripting
 
@@ -529,11 +573,14 @@ The general process here was:
 - Scouts had fun reading and adding to each others' programme lists
 
 ---
+
+<!-- .slide: data-autoslide="3000" -->
+
 # Python code walk-through
 
 ----
 
-<!-- .slide: data-auto-animate -->
+<!-- .slide: data-autoslide="20000" data-auto-animate -->
 ```python []
 #!/usr/bin/env python
 from flask import Flask, render_template, request, redirect, url_for
@@ -554,7 +601,7 @@ if __name__ == "__main__":
 
 ----
 
-<!-- .slide: data-auto-animate -->
+<!-- .slide: data-autoslide="5000" data-auto-animate -->
 ```python [10]
 #!/usr/bin/env python
 from flask import Flask, render_template, request, redirect, url_for
@@ -575,7 +622,7 @@ if __name__ == "__main__":
 
 ----
 
-<!-- .slide: data-visibility="hidden" -->
+<!-- .slide: data-autoslide="10000" data-visibility="hidden" -->
 ```python [13-15]
 #!/usr/bin/env python
 from flask import Flask, render_template, request, redirect, url_for
@@ -601,7 +648,7 @@ if __name__ == "__main__":
 
 ----
 
-<!-- .slide: data-visibility="hidden" -->
+<!-- .slide: data-autoslide="10000" data-visibility="hidden" -->
 ```python [14-16]
 #!/usr/bin/env python
 from flask import Flask, render_template, request, redirect, url_for
@@ -628,7 +675,7 @@ if __name__ == "__main__":
 
 ----
 
-<!-- .slide: data-auto-animate -->
+<!-- .slide: data-autoslide="20000" data-auto-animate -->
 ```python [19-21]
 #!/usr/bin/env python
 from flask import Flask, render_template, request, redirect, url_for
@@ -702,11 +749,11 @@ def new_program():
 if __name__ == "__main__":
     app.run(debug=True, port=80, host="0.0.0.0")
 ```
-<!-- .element: data-id="code-animation" -->
+<!-- .element: data-autoslide="15000" data-id="code-animation" -->
 
 ----
 
-<!-- .slide: data-auto-animate -->
+<!-- .slide: data-autoslide="30000" data-auto-animate -->
 ```python [22-33|47]
 #!/usr/bin/env python
 from flask import Flask, render_template, request, redirect, url_for
@@ -762,9 +809,11 @@ def new_program():
 if __name__ == "__main__":
     app.run(debug=True, port=80, host="0.0.0.0")
 ```
-<!-- .element: data-id="code-animation" -->
+<!-- .element: data-autoslide="20000" data-id="code-animation" -->
 
 ----
+
+<!-- .slide: data-autoslide="20000" -->
 
 # Wrapping up
 
@@ -776,6 +825,8 @@ Note:
 - Promised to zip up their websites and send them to them after camp
 
 ---
+
+<!-- .slide: data-autoslide="60000" -->
 
 # Lessons learned
 
@@ -804,6 +855,8 @@ Note:
 
 ----
 
+<!-- .slide: data-autoslide="30000" -->
+
 # Conclusion
 
 - Very positive feedback from ScoutHack attendees/parents
@@ -815,10 +868,13 @@ Note:
 
 ---
 
+<!-- .slide: data-autoslide="20000" -->
+
 
 ## Thanks
 
 * Luke Byrnes ([@ekulbyrnes@infosec.exchange](https://infosec.exchange/@ekulbyrnes))
-* [Pieper Cafe](http://www.piepercafe.com/) (SE Portland)
+* [Pieper Cafe](http://www.piepercafe.com/) (SE Portland, Oregon, USA)
 * [FOSSY](https://fossy.us)
+* [North Bay Python](https://northbaypython.org)
 * Andy King - Photos
