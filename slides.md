@@ -45,7 +45,7 @@ Note:
 
 - I'm Matt (they/them)
 - Find me by handle, M A T T C E N
-- Post about talk using #nbpy and #TeachKidsWebDev
+- Post about talk using #NBPy and #TeachKidsWebDev
 - Slides available on GitHub: https://github.com/mattcen/2023-07-teach-kids-webdev
 
 ---
