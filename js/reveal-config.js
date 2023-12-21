@@ -2,7 +2,8 @@
 // - https://revealjs.com/initialization/
 // - https://revealjs.com/config/
 // TODO: Set socket server here
-socket_server = 'https://familiar-kiwi-iguanodon.glitch.me'; // Location of socket.io server for multiplex
+//socket_server = 'https://familiar-kiwi-iguanodon.glitch.me'; // Location of socket.io server for multiplex
+socket_server = 'http://localhost'; // Location of socket.io server for multiplex
 Reveal.initialize({
 	hash: true,
 	hashOneBasedIndex: true,
